@@ -10,7 +10,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
-import java.time.Month
 
 @Composable
 fun HomeScreen() {
@@ -21,7 +20,7 @@ fun HomeScreen() {
     ) {
         Column(
             modifier = Modifier
-                .fillMaxWidth(0.8f)
+                .fillMaxWidth(0.9f)
         ) {
             FullWidth("Donate", 13.sp)
             FullWidth("Login", 13.sp)
