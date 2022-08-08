@@ -23,7 +23,7 @@ import dev.dubsky.ourstars.android.ui.theme.White98
 fun FullWidth(text: String, fontSize: TextUnit) {
     Button(
         onClick = {},
-        colors = ButtonDefaults.buttonColors(backgroundColor = White98, contentColor = Primary25),
+        colors = ButtonDefaults.buttonColors(backgroundColor = Primary25, contentColor = White98),
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(13.dp))
