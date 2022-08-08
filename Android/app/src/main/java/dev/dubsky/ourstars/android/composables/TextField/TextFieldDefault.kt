@@ -3,6 +3,8 @@ package dev.dubsky.ourstars.android.composables.TextField
 import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 
@@ -14,5 +16,6 @@ fun TextFieldDefault(state: MutableState<TextFieldValue>) {
 @Preview(showBackground = true)
 @Composable
 fun TextFieldDefaultPreview() {
-    TextFieldDefault()
+    val testState = remember { mutableStateOf(TextFieldValue()) }
+    TextFieldDefault(testState)
 }
