@@ -37,5 +37,5 @@ fun FullWidth(text: String, fontSize: TextUnit) {
 @Preview(showBackground = true)
 @Composable
 fun FullWidthPreview() {
-    FullWidth("Donation", 12.sp)
+    FullWidth("Donation", 14.sp)
 }
