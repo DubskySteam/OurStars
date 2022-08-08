@@ -20,6 +20,7 @@ import dev.dubsky.ourstars.android.composables.buttons.FullWidth
 fun LoginScreen() {
 
     val emailState = remember { mutableStateOf(TextFieldValue())}
+    val passwordState = remember { mutableStateOf(TextFieldValue())}
 
     Box(
         modifier = Modifier
@@ -32,10 +33,8 @@ fun LoginScreen() {
         ) {
             Text("Email address")
             TextField(emailState.value, { emailState.value = it })
-            Text("Username")
             Text("Password")
-            Text("Repeat password")
-            FullWidth("Login", 14.sp)
+            TextField(passwordState.value, { emailState.value = it })
         }
     }
 }
