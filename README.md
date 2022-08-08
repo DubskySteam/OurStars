@@ -3,7 +3,7 @@
 **Design studies:**
   - Anna Kot - [Behance](https://www.behance.net/annakot6) - [Website](https://www.kotanna.com/) - [GitHub](https://github.com/Kot-Anna)
 ### Frontend
-![](https://img.shields.io/badge/Website-X-red?style=for-the-bade&logo=next.js)
+![](https://img.shields.io/badge/Website-todo-red?style=for-the-bade&logo=next.js)
 ![](https://img.shields.io/badge/Android-1.0.0-green?style=for-the-badge&logo=android)
 
 ### Backend
