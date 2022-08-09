@@ -1,6 +1,7 @@
 package dev.dubsky.ourstars.android.screens.open
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Checkbox
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
@@ -27,7 +28,7 @@ fun SignupScreen() {
     val usernameState = remember { mutableStateOf(TextFieldValue()) }
     val passwordState = remember { mutableStateOf(TextFieldValue()) }
     val passwordrepeatState = remember { mutableStateOf(TextFieldValue()) }
-    val anonState = remember { mutableStateOf(TextFieldValue()) }
+    val anonState = remember { mutableStateOf(false) }
 
     Box(
         modifier = Modifier
@@ -53,6 +54,13 @@ fun SignupScreen() {
             TextFieldDefault(passwordState, Icons.Filled.Lock)
             Text("Repeat password")
             TextFieldDefault(passwordrepeatState, Icons.Filled.Refresh)
+            Row {
+                Checkbox(
+                    checked = anonState.value,
+                    onCheckedChange = { anonState.value = it }
+                )
+                Text("Appear anonymous")
+            }
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(10.dp),
