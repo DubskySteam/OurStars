@@ -2,8 +2,12 @@ package dev.dubsky.ourstars.android.screens.open
 
 import android.graphics.Paint.Align
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -17,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.dubsky.ourstars.android.composables.TextField.TextFieldDefault
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
+import dev.dubsky.ourstars.android.ui.theme.Primary25
 
 @Composable
 fun LoginScreen() {
@@ -32,16 +37,22 @@ fun LoginScreen() {
         Column(
             modifier = Modifier
                 .fillMaxWidth(0.9f),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            Text("Log in", fontSize = 24.sp, fontWeight = FontWeight.Bold)
+            Text(
+                "Log in",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.absolutePadding(0.dp, 0.dp, 0.dp, 35.dp)
+            )
             Text("Email address")
-            TextFieldDefault(emailState)
+            TextFieldDefault(emailState, Icons.Filled.Email)
             Text("Password")
-            TextFieldDefault(passwordState)
+            TextFieldDefault(passwordState, Icons.Filled.Lock)
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(8.dp)
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+                modifier = Modifier.absolutePadding(0.dp, 35.dp, 0.dp, 0.dp)
             ) {
                 FullWidth("Login", 14.sp)
                 Text("Don't have an account? Sign up")
