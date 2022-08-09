@@ -3,6 +3,7 @@ package dev.dubsky.ourstars.android.screens.open
 import android.graphics.Paint.Align
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.material.icons.Icons
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.dubsky.ourstars.android.composables.TextField.TextFieldDefault
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
+import dev.dubsky.ourstars.android.ui.theme.Poppins
 import dev.dubsky.ourstars.android.ui.theme.Primary25
 
 @Composable

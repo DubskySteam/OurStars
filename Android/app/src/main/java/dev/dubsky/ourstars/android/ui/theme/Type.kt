@@ -18,18 +18,16 @@ val Typography = Typography(
     body1 = TextStyle(
         fontFamily = Poppins,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-    /* Other default text styles to override
+        fontSize = 12.sp
+    ),
     button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
+        fontFamily = Poppins,
+        fontWeight = FontWeight.W400,
         fontSize = 14.sp
     ),
     caption = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = Poppins,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp
     )
-    */
 )
