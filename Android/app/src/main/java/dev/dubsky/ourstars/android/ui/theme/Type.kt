@@ -10,11 +10,16 @@ import dev.dubsky.ourstars.android.R
 
 val Poppins = FontFamily(
     Font(R.font.poppins_regular),
-    Font(R.font.poppins_bold)
+    Font(R.font.poppins_bold, FontWeight.Bold)
 )
 
 // Set of Material typography styles to start with
 val Typography = Typography(
+    h1 = TextStyle(
+        fontFamily = Poppins,
+        fontWeight = FontWeight.Bold,
+        fontSize = 12.sp
+    ),
     body1 = TextStyle(
         fontFamily = Poppins,
         fontWeight = FontWeight.Normal,
@@ -22,7 +27,7 @@ val Typography = Typography(
     ),
     button = TextStyle(
         fontFamily = Poppins,
-        fontWeight = FontWeight.W400,
+        fontWeight = FontWeight.Normal,
         fontSize = 14.sp
     ),
     caption = TextStyle(
