@@ -1,7 +1,10 @@
 package dev.dubsky.ourstars.android.screens.open
 
+import android.graphics.Paint.Align
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Scaffold
@@ -17,9 +20,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import dev.dubsky.ourstars.android.composables.text.TextGeneral
 import dev.dubsky.ourstars.android.composables.text.TextHeader
 import dev.dubsky.ourstars.android.R
+import dev.dubsky.ourstars.android.composables.component.AvatarText
+import dev.dubsky.ourstars.android.composables.component.DailyStars
+import dev.dubsky.ourstars.android.composables.text.TextBold
+import dev.dubsky.ourstars.android.composables.text.TextCustom
 import dev.dubsky.ourstars.android.ui.theme.*
 
 @Composable
@@ -49,7 +57,7 @@ fun DailyDonationScreen() {
         }
     ) {
         Image(
-            painter = painterResource(R.drawable.daily_bg),
+            painter = painterResource(R.drawable.daily_bg2),
             contentDescription = "",
             modifier = Modifier
                 .fillMaxSize(),
@@ -62,50 +70,38 @@ fun DailyDonationScreen() {
                 .fillMaxSize()
         ) {
             Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
                     .fillMaxWidth(0.9f)
-                    .fillMaxHeight()
+                    .fillMaxHeight(),
             ) {
                 Row(
-                    verticalAlignment = Alignment.CenterVertically
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .absolutePadding(0.dp, 18.dp)
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Image(
                         painterResource(R.drawable.logo),
                         contentDescription = null,
                         alignment = Alignment.CenterStart
                     )
-                    TextGeneral("Jane Doe", Primary15)
-                    Image(
-                        Icons.Filled.Person,
-                        contentDescription = null,
-                        modifier = Modifier
-                            .clip(CircleShape)
-                            .size(50.dp)
-                    )
+                    AvatarText("Jane Doe", Icons.Filled.Person)
                 }
-                Image(
-                    painter = painterResource(R.drawable.star_big),
-                    contentDescription = "",
-                    alignment = Alignment.Center
-                )
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
+                Column(
+                    modifier = Modifier
+                        .padding(vertical = 30.dp)
                 ) {
-                    Image(
-                        painter = painterResource(R.drawable.star_small),
-                        contentDescription = "",
-                        modifier = Modifier.rotate(340f)
-                    )
-                    Image(
-                        painter = painterResource(R.drawable.star_small),
-                        contentDescription = "",
-                        modifier = Modifier
-                            .absoluteOffset(20.dp, 68.dp)
-                    )
+                    TextCustom("Daily donation", Primary15, 20.sp)
+                    TextGeneral("Select your star", Primary40)
                 }
-        }
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    DailyStars()
+                }
+            }
         }
     }
 
