@@ -24,7 +24,8 @@ import dev.dubsky.ourstars.android.ui.theme.*
 @Composable
 fun DailyDonationScreen() {
     Scaffold(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize(),
         drawerBackgroundColor = Primary40T,
         backgroundColor = Primary25,
         drawerContent = {
