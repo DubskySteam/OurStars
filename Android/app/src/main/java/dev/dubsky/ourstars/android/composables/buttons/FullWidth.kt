@@ -22,9 +22,9 @@ import dev.dubsky.ourstars.android.ui.theme.Primary25
 import dev.dubsky.ourstars.android.ui.theme.White98
 
 @Composable
-fun FullWidth(text: String, fontSize: TextUnit) {
+fun FullWidth(text: String, fontSize: TextUnit, event: ()->Unit ) {
     Button(
-        onClick = {},
+        onClick = event,
         colors = ButtonDefaults.buttonColors(backgroundColor = Primary25, contentColor = White98),
         modifier = Modifier
             .fillMaxWidth()
@@ -39,5 +39,5 @@ fun FullWidth(text: String, fontSize: TextUnit) {
 @Preview(showBackground = true)
 @Composable
 fun FullWidthPreview() {
-    FullWidth("Donation", 14.sp)
+    FullWidth("Donation", 14.sp) { }
 }
