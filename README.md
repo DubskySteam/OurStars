@@ -4,7 +4,7 @@
   - Anna Kot - [Behance](https://www.behance.net/annakot6) - [Website](https://www.kotanna.com/) - [GitHub](https://github.com/Kot-Anna)
 ### Frontend
 ![](https://img.shields.io/badge/Website-TODO-red?style=for-the-badge&logo=next.js)
-![](https://img.shields.io/badge/Android-1.1.0-green?style=for-the-badge&logo=android)
+![](https://img.shields.io/badge/Android-1.2.0-green?style=for-the-badge&logo=android)
 
 ### Backend
 ![](https://img.shields.io/badge/Database-1.2-green?style=for-the-badge&logo=postgresql)
