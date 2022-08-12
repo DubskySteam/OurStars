@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.dubsky.ourstars.android.composables.TextField.TextFieldDefault
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
+import dev.dubsky.ourstars.android.ui.theme.Poppins
 
 @Composable
 fun SignupScreen() {
@@ -38,28 +39,37 @@ fun SignupScreen() {
         Column(
             modifier = Modifier
                 .fillMaxWidth(0.9f),
-            verticalArrangement = Arrangement.spacedBy(6.dp)
+            verticalArrangement = Arrangement.spacedBy(28.dp)
         ) {
             Text(
                 "Sign up",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
+                fontFamily = Poppins,
                 modifier = Modifier.absolutePadding(0.dp, 0.dp, 0.dp, 35.dp)
             )
-            Text("Email address")
-            TextFieldDefault(emailState, Icons.Filled.Email)
-            Text("Username")
-            TextFieldDefault(usernameState, Icons.Filled.Person)
-            Text("Password")
-            TextFieldDefault(passwordState, Icons.Filled.Lock)
-            Text("Repeat password")
-            TextFieldDefault(passwordrepeatState, Icons.Filled.Refresh)
+            Column() {
+                Text("Email address", fontFamily = Poppins)
+                TextFieldDefault(emailState, Icons.Filled.Email)
+            }
+            Column() {
+                Text("Username", fontFamily = Poppins)
+                TextFieldDefault(usernameState, Icons.Filled.Person)
+            }
+            Column() {
+                Text("Password", fontFamily = Poppins)
+                TextFieldDefault(passwordState, Icons.Filled.Lock)
+            }
+            Column() {
+                Text("Repeat password", fontFamily = Poppins)
+                TextFieldDefault(passwordrepeatState, Icons.Filled.Refresh)
+            }
             Row {
                 Checkbox(
                     checked = anonState.value,
                     onCheckedChange = { anonState.value = it }
                 )
-                Text("Appear anonymous")
+                Text("Appear anonymous", fontFamily = Poppins)
             }
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
