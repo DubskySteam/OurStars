@@ -16,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import dev.dubsky.ourstars.android.ui.theme.Poppins
 import dev.dubsky.ourstars.android.ui.theme.Primary25
 import dev.dubsky.ourstars.android.ui.theme.White98
 
@@ -26,10 +27,10 @@ fun FullWidth(text: String, fontSize: TextUnit) {
         colors = ButtonDefaults.buttonColors(backgroundColor = Primary25, contentColor = White98),
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(13.dp))
+            .clip(RoundedCornerShape(17.dp))
             .height(48.dp)
     ) {
-        Text(text, fontSize = fontSize)
+        Text(text, fontSize = fontSize, fontFamily = Poppins)
         Icon(Icons.Filled.PlayArrow, contentDescription = null)
     }
 }

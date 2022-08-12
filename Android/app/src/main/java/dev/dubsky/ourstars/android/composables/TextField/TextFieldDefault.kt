@@ -5,6 +5,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -31,12 +32,13 @@ fun TextFieldDefault(state: MutableState<TextFieldValue>, trail: ImageVector) {
         value = state.value,
         onValueChange = { state.value = it },
         singleLine = true,
-        shape = RoundedCornerShape(16.dp),
+        shape = RoundedCornerShape(17.dp),
         trailingIcon = { Icon(trail, "", tint = Primary25) },
         colors = TextFieldDefaults.textFieldColors(backgroundColor = White98, cursorColor = Primary25, textColor = Primary25),
         modifier = Modifier
             .fillMaxWidth()
-            .border(border = BorderStroke(0.5.dp, Gray80), shape = RoundedCornerShape(16.dp))
+            .border(border = BorderStroke(0.5.dp, Gray80), shape = RoundedCornerShape(17.dp))
+            .height(47.dp)
     )
 }
 
