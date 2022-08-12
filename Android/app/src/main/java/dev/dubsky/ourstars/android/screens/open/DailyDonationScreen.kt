@@ -8,9 +8,11 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.graphics.scaleMatrix
 import dev.dubsky.ourstars.android.composables.text.TextGeneral
 import dev.dubsky.ourstars.android.composables.text.TextHeader
 import dev.dubsky.ourstars.android.R
@@ -50,6 +52,22 @@ fun DailyDonationScreen() {
             alignment = Alignment.Center,
             contentScale = ContentScale.FillWidth
         )
+        Box(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            Column(
+                modifier = Modifier.fillMaxWidth(0.9f)
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Image(
+                        painterResource(R.drawable.logo),
+                        contentDescription = null
+                        )
+                }
+            }
+        }
     }
 
 }
