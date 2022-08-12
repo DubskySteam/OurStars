@@ -18,6 +18,8 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import dev.dubsky.ourstars.android.composables.text.TextGeneral
 import dev.dubsky.ourstars.android.composables.textfield.TextFieldDefault
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
@@ -25,7 +27,9 @@ import dev.dubsky.ourstars.android.ui.theme.Poppins
 import dev.dubsky.ourstars.android.ui.theme.Primary15
 
 @Composable
-fun SignupScreen() {
+fun SignupScreen(
+    navController: NavController
+) {
 
     val emailState = remember { mutableStateOf(TextFieldValue()) }
     val usernameState = remember { mutableStateOf(TextFieldValue()) }
@@ -84,7 +88,7 @@ fun SignupScreen() {
                 verticalArrangement = Arrangement.spacedBy(10.dp),
                 modifier = Modifier.absolutePadding(0.dp, 35.dp, 0.dp, 0.dp)
             ) {
-                FullWidth("Sign up", 14.sp)
+                FullWidth("Sign up", 14.sp) { }
                 TextGeneral("Already have an account? Log in\"", Primary15)
             }
         }
@@ -94,5 +98,5 @@ fun SignupScreen() {
 @Preview(showBackground = true)
 @Composable
 fun SignupPreview() {
-    SignupScreen()
+    SignupScreen(rememberNavController())
 }
