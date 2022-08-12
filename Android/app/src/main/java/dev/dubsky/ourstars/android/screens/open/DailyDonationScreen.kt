@@ -56,6 +56,7 @@ fun DailyDonationScreen() {
             modifier = Modifier.fillMaxSize()
         ) {
             Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxWidth(0.9f)
             ) {
                 Row(
@@ -65,6 +66,28 @@ fun DailyDonationScreen() {
                         painterResource(R.drawable.logo),
                         contentDescription = null
                         )
+                }
+                Image(
+                    painter = painterResource(R.drawable.star_big),
+                    contentDescription = "",
+                    alignment = Alignment.Center
+                )
+                Row(
+
+                ) {
+                    Image(
+                        painter = painterResource(R.drawable.star_small),
+                        contentDescription = "",
+                        alignment = Alignment.Center,
+                        contentScale = ContentScale.Inside,
+                        modifier = Modifier.rotate(250f)
+                    )
+                    Image(
+                        painter = painterResource(R.drawable.star_small),
+                        contentDescription = "",
+                        alignment = Alignment.Center,
+                        contentScale = ContentScale.Inside
+                    )
                 }
             }
         }
