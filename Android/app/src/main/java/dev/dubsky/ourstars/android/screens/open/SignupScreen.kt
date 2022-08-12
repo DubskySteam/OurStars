@@ -21,6 +21,8 @@ import androidx.compose.ui.unit.sp
 import dev.dubsky.ourstars.android.composables.TextField.TextFieldDefault
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
 import dev.dubsky.ourstars.android.ui.theme.Poppins
+import dev.dubsky.ourstars.android.ui.theme.Primary15
+import dev.dubsky.ourstars.android.ui.theme.Primary25
 
 @Composable
 fun SignupScreen() {
@@ -46,22 +48,23 @@ fun SignupScreen() {
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 fontFamily = Poppins,
+                color = Primary15,
                 modifier = Modifier.absolutePadding(0.dp, 0.dp, 0.dp, 35.dp)
             )
             Column() {
-                Text("Email address", fontFamily = Poppins)
+                Text("Email address", fontFamily = Poppins, color = Primary15)
                 TextFieldDefault(emailState, Icons.Filled.Email)
             }
             Column() {
-                Text("Username", fontFamily = Poppins)
+                Text("Username", fontFamily = Poppins, color = Primary15)
                 TextFieldDefault(usernameState, Icons.Filled.Person)
             }
             Column() {
-                Text("Password", fontFamily = Poppins)
+                Text("Password", fontFamily = Poppins, color = Primary15)
                 TextFieldDefault(passwordState, Icons.Filled.Lock)
             }
             Column() {
-                Text("Repeat password", fontFamily = Poppins)
+                Text("Repeat password", fontFamily = Poppins, color = Primary15)
                 TextFieldDefault(passwordrepeatState, Icons.Filled.Refresh)
             }
             Row {
@@ -69,7 +72,7 @@ fun SignupScreen() {
                     checked = anonState.value,
                     onCheckedChange = { anonState.value = it }
                 )
-                Text("Appear anonymous", fontFamily = Poppins)
+                Text("Appear anonymous", fontFamily = Poppins, color = Primary15)
             }
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
