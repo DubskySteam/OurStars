@@ -49,7 +49,7 @@ fun SignupScreen() {
                 fontWeight = FontWeight.Bold,
                 fontFamily = Poppins,
                 color = Primary15,
-                modifier = Modifier.absolutePadding(0.dp, 0.dp, 0.dp, 35.dp)
+                modifier = Modifier.absolutePadding(0.dp, 0.dp, 0.dp, 20.dp)
             )
             Column() {
                 Text("Email address", fontFamily = Poppins, color = Primary15)
@@ -66,13 +66,18 @@ fun SignupScreen() {
             Column() {
                 Text("Repeat password", fontFamily = Poppins, color = Primary15)
                 TextFieldDefault(passwordrepeatState, Icons.Filled.Refresh)
-            }
-            Row {
-                Checkbox(
-                    checked = anonState.value,
-                    onCheckedChange = { anonState.value = it }
-                )
-                Text("Appear anonymous", fontFamily = Poppins, color = Primary15)
+                Row (
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .absolutePadding(0.dp, 16.dp, 0.dp, 0.dp)
+                ) {
+                    Checkbox(
+                        checked = anonState.value,
+                        onCheckedChange = { anonState.value = it }
+                    )
+                    Text("Appear anonymous", fontFamily = Poppins, color = Primary15, fontSize = 12.sp)
+                }
             }
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -80,7 +85,7 @@ fun SignupScreen() {
                 modifier = Modifier.absolutePadding(0.dp, 35.dp, 0.dp, 0.dp)
             ) {
                 FullWidth("Sign up", 14.sp)
-                Text("Already have an account? Log in")
+                Text("Already have an account? Log in", fontFamily = Poppins, color = Primary15)
             }
         }
     }
