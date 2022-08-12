@@ -1,18 +1,22 @@
 package dev.dubsky.ourstars.android.screens.open
 
-import android.graphics.Matrix.ScaleToFit
-import android.widget.ImageView.ScaleType
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Scaffold
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.core.graphics.scaleMatrix
+import androidx.compose.ui.unit.dp
 import dev.dubsky.ourstars.android.composables.text.TextGeneral
 import dev.dubsky.ourstars.android.composables.text.TextHeader
 import dev.dubsky.ourstars.android.R
@@ -53,19 +57,32 @@ fun DailyDonationScreen() {
             contentScale = ContentScale.FillWidth
         )
         Box(
-            modifier = Modifier.fillMaxSize()
+            contentAlignment = Alignment.Center,
+            modifier = Modifier
+                .fillMaxSize()
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.fillMaxWidth(0.9f)
+                modifier = Modifier
+                    .fillMaxWidth(0.9f)
+                    .fillMaxHeight()
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Image(
                         painterResource(R.drawable.logo),
-                        contentDescription = null
-                        )
+                        contentDescription = null,
+                        alignment = Alignment.CenterStart
+                    )
+                    TextGeneral("Jane Doe", Primary15)
+                    Image(
+                        Icons.Filled.Person,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .clip(CircleShape)
+                            .size(50.dp)
+                    )
                 }
                 Image(
                     painter = painterResource(R.drawable.star_big),
@@ -73,23 +90,22 @@ fun DailyDonationScreen() {
                     alignment = Alignment.Center
                 )
                 Row(
-
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
                 ) {
                     Image(
                         painter = painterResource(R.drawable.star_small),
                         contentDescription = "",
-                        alignment = Alignment.Center,
-                        contentScale = ContentScale.Inside,
-                        modifier = Modifier.rotate(250f)
+                        modifier = Modifier.rotate(340f)
                     )
                     Image(
                         painter = painterResource(R.drawable.star_small),
                         contentDescription = "",
-                        alignment = Alignment.Center,
-                        contentScale = ContentScale.Inside
+                        modifier = Modifier
+                            .absoluteOffset(20.dp, 68.dp)
                     )
                 }
-            }
+        }
         }
     }
 
