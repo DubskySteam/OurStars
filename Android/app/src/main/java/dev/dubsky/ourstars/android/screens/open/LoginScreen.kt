@@ -1,11 +1,7 @@
 package dev.dubsky.ourstars.android.screens.open
 
-import android.graphics.Paint.Align
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.material.TextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
@@ -16,14 +12,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import dev.dubsky.ourstars.android.composables.TextField.TextFieldDefault
+import dev.dubsky.ourstars.android.composables.textfield.TextFieldDefault
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
-import dev.dubsky.ourstars.android.ui.theme.Poppins
-import dev.dubsky.ourstars.android.ui.theme.Primary25
 
 @Composable
 fun LoginScreen() {

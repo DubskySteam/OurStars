@@ -18,11 +18,11 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import dev.dubsky.ourstars.android.composables.TextField.TextFieldDefault
+import dev.dubsky.ourstars.android.composables.text.TextGeneral
+import dev.dubsky.ourstars.android.composables.textfield.TextFieldDefault
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
 import dev.dubsky.ourstars.android.ui.theme.Poppins
 import dev.dubsky.ourstars.android.ui.theme.Primary15
-import dev.dubsky.ourstars.android.ui.theme.Primary25
 
 @Composable
 fun SignupScreen() {
@@ -52,19 +52,19 @@ fun SignupScreen() {
                 modifier = Modifier.absolutePadding(0.dp, 0.dp, 0.dp, 20.dp)
             )
             Column() {
-                Text("Email address", fontFamily = Poppins, color = Primary15)
+                TextGeneral("Email address", Primary15)
                 TextFieldDefault(emailState, Icons.Filled.Email)
             }
             Column() {
-                Text("Username", fontFamily = Poppins, color = Primary15)
+                TextGeneral("Username", Primary15)
                 TextFieldDefault(usernameState, Icons.Filled.Person)
             }
             Column() {
-                Text("Password", fontFamily = Poppins, color = Primary15)
+                TextGeneral("Password", Primary15)
                 TextFieldDefault(passwordState, Icons.Filled.Lock)
             }
             Column() {
-                Text("Repeat password", fontFamily = Poppins, color = Primary15)
+                TextGeneral("Repeat password", Primary15)
                 TextFieldDefault(passwordrepeatState, Icons.Filled.Refresh)
                 Row (
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -85,7 +85,7 @@ fun SignupScreen() {
                 modifier = Modifier.absolutePadding(0.dp, 35.dp, 0.dp, 0.dp)
             ) {
                 FullWidth("Sign up", 14.sp)
-                Text("Already have an account? Log in", fontFamily = Poppins, color = Primary15)
+                TextGeneral("Already have an account? Log in\"", Primary15)
             }
         }
     }
