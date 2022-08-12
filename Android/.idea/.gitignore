@@ -1,4 +1,5 @@
 # Default ignored files
+/deploymentTargetDropDown.xml
 /deployment.xml
 /discord.xml
 /shelf/
