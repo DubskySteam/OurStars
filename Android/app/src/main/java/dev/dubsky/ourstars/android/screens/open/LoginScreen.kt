@@ -19,7 +19,11 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import dev.dubsky.ourstars.android.composables.textfield.TextFieldDefault
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
+import dev.dubsky.ourstars.android.composables.text.TextGeneral
 import dev.dubsky.ourstars.android.screens.ScreenRoutes
+import dev.dubsky.ourstars.android.ui.theme.Poppins
+import dev.dubsky.ourstars.android.ui.theme.Primary15
+import dev.dubsky.ourstars.android.ui.theme.Primary25
 
 @Composable
 fun LoginScreen(
@@ -43,11 +47,13 @@ fun LoginScreen(
                 "Log in",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.absolutePadding(0.dp, 0.dp, 0.dp, 35.dp)
+                fontFamily = Poppins,
+                color = Primary15,
+                modifier = Modifier.absolutePadding(0.dp, 0.dp, 0.dp, 20.dp)
             )
-            Text("Email address")
+            TextGeneral("Email address", Primary25)
             TextFieldDefault(emailState, Icons.Filled.Email)
-            Text("Password")
+            TextGeneral("Password", Primary25)
             TextFieldDefault(passwordState, Icons.Filled.Lock)
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
