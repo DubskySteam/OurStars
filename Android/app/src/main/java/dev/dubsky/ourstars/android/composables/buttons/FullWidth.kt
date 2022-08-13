@@ -3,10 +3,7 @@ package dev.dubsky.ourstars.android.composables.buttons
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Icon
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.runtime.Composable
@@ -23,16 +20,22 @@ import dev.dubsky.ourstars.android.ui.theme.White98
 
 @Composable
 fun FullWidth(text: String, fontSize: TextUnit, event: ()->Unit ) {
-    Button(
-        onClick = event,
-        colors = ButtonDefaults.buttonColors(backgroundColor = Primary25, contentColor = White98),
+    Surface(
+        elevation = 10.dp,
         modifier = Modifier
-            .fillMaxWidth()
             .clip(RoundedCornerShape(17.dp))
-            .height(48.dp)
     ) {
-        Text(text, fontSize = fontSize, fontFamily = Poppins, fontWeight = FontWeight.Bold)
-        Icon(Icons.Filled.PlayArrow, contentDescription = null)
+        Button(
+            onClick = event,
+            colors = ButtonDefaults.buttonColors(backgroundColor = Primary25, contentColor = White98),
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(17.dp))
+                .height(48.dp)
+        ) {
+            Text(text, fontSize = fontSize, fontFamily = Poppins, fontWeight = FontWeight.Bold)
+            Icon(Icons.Filled.PlayArrow, contentDescription = null)
+        }
     }
 }
 
