@@ -88,7 +88,7 @@ fun DailyDonationScreen(
                     modifier = Modifier
                         .padding(vertical = 30.dp)
                 ) {
-                    TextCustom("Daily donation", Primary15, 20.sp)
+                    TextCustom("Daily donation", Primary15, 20.sp, modifier = Modifier)
                     TextGeneral("Select your star", Primary40)
                 }
                 Row(

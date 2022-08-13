@@ -1,5 +1,6 @@
 package dev.dubsky.ourstars.android.screens.open
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
@@ -19,6 +20,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import dev.dubsky.ourstars.android.composables.textfield.TextFieldDefault
 import dev.dubsky.ourstars.android.composables.buttons.FullWidth
+import dev.dubsky.ourstars.android.composables.text.TextCustom
 import dev.dubsky.ourstars.android.composables.text.TextGeneral
 import dev.dubsky.ourstars.android.screens.ScreenRoutes
 import dev.dubsky.ourstars.android.ui.theme.Poppins
@@ -61,7 +63,22 @@ fun LoginScreen(
                 modifier = Modifier.absolutePadding(0.dp, 35.dp, 0.dp, 0.dp)
             ) {
                 FullWidth("Login", 14.sp) { }
-                Text("Don't have an account? Sign up")
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(5.dp)
+                ) {
+                    TextCustom(
+                        "Don't have an account?",
+                        Primary25, 12.sp,
+                        FontWeight.Normal,
+                        Modifier
+                    )
+                    TextCustom(
+                        "Sign up",
+                        Primary25, 12.sp,
+                        FontWeight.Bold,
+                        Modifier.clickable { navController.navigate(ScreenRoutes.Signup.route) }
+                    )
+                }
             }
         }
     }
