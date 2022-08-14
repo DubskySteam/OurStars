@@ -34,5 +34,10 @@ fun SetupNavGraph(
         ) {
             DailyDonationScreen(navController)
         }
+        composable(
+            route = ScreenRoutes.Charities.route
+        ) {
+            CharitiesScreen(navController)
+        }
     }
 }

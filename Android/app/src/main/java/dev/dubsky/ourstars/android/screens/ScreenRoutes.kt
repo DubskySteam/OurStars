@@ -6,5 +6,6 @@ sealed class ScreenRoutes(val route: String) {
     object Signup : ScreenRoutes("signup")
     object Daily : ScreenRoutes("daily")
     object Profile : ScreenRoutes("profile")
+    object Charities : ScreenRoutes("charities")
     object Settings : ScreenRoutes("settings")
 }
