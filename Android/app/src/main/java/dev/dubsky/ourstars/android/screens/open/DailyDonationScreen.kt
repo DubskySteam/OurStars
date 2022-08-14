@@ -19,6 +19,7 @@ import dev.dubsky.ourstars.android.composables.text.TextGeneral
 import dev.dubsky.ourstars.android.composables.text.TextHeader
 import dev.dubsky.ourstars.android.R
 import dev.dubsky.ourstars.android.composables.component.AvatarText
+import dev.dubsky.ourstars.android.composables.component.AvatarTextRow
 import dev.dubsky.ourstars.android.composables.component.DailyStars
 import dev.dubsky.ourstars.android.composables.text.TextCustom
 import dev.dubsky.ourstars.android.ui.theme.*
@@ -70,20 +71,10 @@ fun DailyDonationScreen(
                     .fillMaxWidth(0.9f)
                     .fillMaxHeight(),
             ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .absolutePadding(0.dp, 18.dp)
-                        .fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Image(
-                        painterResource(R.drawable.logo),
-                        contentDescription = null,
-                        alignment = Alignment.CenterStart
-                    )
-                    AvatarText("Jane Doe", Icons.Filled.Person)
-                }
+                AvatarTextRow(
+                    "Jane Doe",
+                    Icons.Filled.Person
+                )
                 Column(
                     modifier = Modifier
                         .padding(vertical = 30.dp)
