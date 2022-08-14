@@ -29,6 +29,7 @@ fun HomeScreen(
             FullWidth("Log in", 13.sp) { navController.navigate(ScreenRoutes.Login.route) }
             FullWidth("Sign up", 13.sp) { navController.navigate(ScreenRoutes.Signup.route) }
             FullWidth("Daily Donation", 13.sp) { navController.navigate(ScreenRoutes.Daily.route) }
+            FullWidth("Charities", 13.sp) { navController.navigate(ScreenRoutes.Charities.route) }
         }
     }
 }
