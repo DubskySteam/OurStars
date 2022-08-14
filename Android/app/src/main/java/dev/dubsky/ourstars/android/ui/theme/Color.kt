@@ -2,6 +2,7 @@ package dev.dubsky.ourstars.android.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+val Gray35 = Color(0xFF565062)
 val Gray80 = Color(0xFFCAC7D1)
 val Gray98 = Color(0xFFFAF9FA)
 val White98 = Color(0xFFFAF9FA)
