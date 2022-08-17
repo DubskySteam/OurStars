@@ -32,7 +32,7 @@ fun TextFieldDefault(state: MutableState<TextFieldValue>, trail: ImageVector) {
         colors = TextFieldDefaults.textFieldColors(backgroundColor = White98, cursorColor = Primary25, textColor = Primary25),
         modifier = Modifier
             .fillMaxWidth()
-            .border(border = BorderStroke(0.5.dp, Gray80), shape = RoundedCornerShape(17.dp))
+            .border(border = BorderStroke(1.dp, Gray80), shape = RoundedCornerShape(17.dp))
             .height(47.dp)
     )
 }
