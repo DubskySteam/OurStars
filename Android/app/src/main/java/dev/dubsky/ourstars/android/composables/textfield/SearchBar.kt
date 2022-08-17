@@ -19,6 +19,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
@@ -53,7 +54,7 @@ fun SearchBar(state: MutableState<TextFieldValue>, trail: ImageVector) {
                 .border(border = BorderStroke(0.5.dp, Gray80), shape = RoundedCornerShape(17.dp))
                 .height(47.dp)
         )
-        IconFrame(50, R.drawable.settings)
+        IconFrame(50, R.drawable.settings, Color.White, Primary25)
     }
 }
 

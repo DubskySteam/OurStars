@@ -15,17 +15,22 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.dubsky.ourstars.android.R
+import dev.dubsky.ourstars.android.ui.theme.Primary15
 import dev.dubsky.ourstars.android.ui.theme.Primary25
+import java.util.Collections
 
 @Composable
 fun IconFrame(
     size: Int,
-    img: Int
+    img: Int,
+    contentColor: Color,
+    backgroundColor: Color
 ) {
     Box(
         contentAlignment = Alignment.Center,
@@ -34,12 +39,18 @@ fun IconFrame(
             .background(Primary25,RoundedCornerShape(17.dp))
             .clip(RoundedCornerShape(17.dp))
     ) {
-        Image(painterResource(img), null)
+        Image(
+            painter = painterResource(img),
+            contentDescription = null,
+            colorFilter = ColorFilter.tint(contentColor),
+            modifier = Modifier
+                .background(backgroundColor)
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun IconFramePreview() {
-    IconFrame(48, R.drawable.settings)
+    IconFrame(48, R.drawable.settings, Color.White, Primary25)
 }
