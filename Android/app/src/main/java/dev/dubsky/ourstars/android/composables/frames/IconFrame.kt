@@ -1,5 +1,6 @@
 package dev.dubsky.ourstars.android.composables.frames
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
@@ -14,14 +15,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import dev.dubsky.ourstars.android.R
 import dev.dubsky.ourstars.android.ui.theme.Primary25
 
 @Composable
 fun IconFrame(
     size: Int,
-    icon: ImageVector
 ) {
     Box(
         contentAlignment = Alignment.Center,
@@ -30,12 +32,12 @@ fun IconFrame(
             .background(Primary25,RoundedCornerShape(17.dp))
             .clip(RoundedCornerShape(17.dp))
     ) {
-        Icon(icon, null, tint = Color.White)
+        Image(painterResource(R.drawable.settings), null)
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun IconFramePreview() {
-    IconFrame(48, Icons.Filled.Settings)
+    IconFrame(48)
 }
