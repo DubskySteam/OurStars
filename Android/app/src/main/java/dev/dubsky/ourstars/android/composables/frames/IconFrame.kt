@@ -3,6 +3,7 @@ package dev.dubsky.ourstars.android.composables.frames
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
@@ -26,7 +27,7 @@ fun IconFrame(
         contentAlignment = Alignment.Center,
         modifier = Modifier
             .size(size.dp)
-            .background(Primary25)
+            .background(Primary25,RoundedCornerShape(17.dp))
             .clip(RoundedCornerShape(17.dp))
     ) {
         Icon(icon, null, tint = Color.White)
