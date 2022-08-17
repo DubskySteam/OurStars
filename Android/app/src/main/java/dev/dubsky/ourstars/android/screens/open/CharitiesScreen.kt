@@ -2,6 +2,7 @@ package dev.dubsky.ourstars.android.screens.open
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Surface
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons
@@ -58,27 +59,41 @@ fun CharitiesScreen(
                 TextCustom("Healthcare", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
                 // TextCustom("Family Support", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
             }
-            Column(
+            LazyColumn(
                 verticalArrangement = Arrangement.spacedBy(20.dp)
             ) {
-                CharityCard(
-                    "Child Protection",
-                    "Improve rural schools in Genovia",
-                    2300.0f,
-                    1033.0f,
-                )
-                CharityCard(
-                    "Child Protection",
-                    "Improve rural schools in Genovia",
-                    2300.0f,
-                    1033.0f,
-                )
-                CharityCard(
-                    "Child Protection",
-                    "Improve rural schools in Genovia",
-                    2300.0f,
-                    1033.0f,
-                )
+                item {
+                    CharityCard(
+                        "Child Protection",
+                        "Improve rural schools in Genovia",
+                        2300.0f,
+                        1033.0f,
+                    )
+                }
+                item {
+                    CharityCard(
+                        "Child Protection",
+                        "Improve rural schools in Genovia",
+                        2300.0f,
+                        1033.0f,
+                    )
+                }
+                item {
+                    CharityCard(
+                        "Child Protection",
+                        "Improve rural schools in Genovia",
+                        2300.0f,
+                        1033.0f,
+                    )
+                }
+                item {
+                    CharityCard(
+                        "Child Protection",
+                        "Improve rural schools in Genovia",
+                        2300.0f,
+                        1033.0f,
+                    )
+                }
             }
         }
     }
