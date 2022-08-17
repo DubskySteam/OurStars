@@ -49,7 +49,7 @@ fun CharitiesScreen(
             AvatarTextRow("Jane Doe", Icons.Filled.Person)
             SearchBar(searchState, Icons.Filled.Search)
             Row(
-                horizontalArrangement = Arrangement.SpaceEvenly,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier
                     .fillMaxWidth()
             ) {
