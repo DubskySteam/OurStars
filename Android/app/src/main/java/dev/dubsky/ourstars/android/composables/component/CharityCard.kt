@@ -50,7 +50,7 @@ fun CharityCard(
                 painter = painterResource(R.drawable.ic_launcher_background),
                 contentDescription = null,
                 Modifier
-                    .clip(RoundedCornerShape(17.dp))
+                    .clip(RoundedCornerShape(17.dp, 0.dp, 0.dp, 0.dp))
                     .size(160.dp)
             )
             Column (
