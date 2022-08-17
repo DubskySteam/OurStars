@@ -52,7 +52,7 @@ fun SearchBar(state: MutableState<TextFieldValue>, trail: ImageVector) {
                 .border(border = BorderStroke(0.5.dp, Gray80), shape = RoundedCornerShape(17.dp))
                 .height(47.dp)
         )
-        IconFrame(50, Icons.Filled.Settings)
+        IconFrame(50)
     }
 }
 
