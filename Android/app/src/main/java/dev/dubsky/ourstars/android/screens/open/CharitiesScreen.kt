@@ -3,6 +3,7 @@ package dev.dubsky.ourstars.android.screens.open
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.Surface
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons
@@ -49,14 +50,23 @@ fun CharitiesScreen(
                 ) {
             AvatarTextRow("Jane Doe", Icons.Filled.Person)
             SearchBar(searchState, Icons.Filled.Search)
-            Row(
+            LazyRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier
                     .fillMaxWidth()
             ) {
-                TextCustom("Animal Welfare", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
-                TextCustom("Child Protection", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
-                TextCustom("Healthcare", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
+                item {
+                    TextCustom("Animal Welfare", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
+                }
+                item {
+                    TextCustom("Child Protection", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
+                }
+                item {
+                    TextCustom("Healthcare", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
+                }
+                item {
+                    TextCustom("Family support", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
+                }
                 // TextCustom("Family Support", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
             }
             LazyColumn(
