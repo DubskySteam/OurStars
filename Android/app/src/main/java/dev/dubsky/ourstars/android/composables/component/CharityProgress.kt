@@ -1,5 +1,6 @@
 package dev.dubsky.ourstars.android.composables.component
 
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -14,6 +15,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.dubsky.ourstars.android.composables.text.TextCustom
 import dev.dubsky.ourstars.android.ui.theme.Gray35
+import dev.dubsky.ourstars.android.ui.theme.Gray80
+import dev.dubsky.ourstars.android.ui.theme.Gray98
 import dev.dubsky.ourstars.android.ui.theme.Primary25
 
 @Composable
@@ -25,7 +28,8 @@ fun CharityProgress(p_current: Int, p_goal: Int) {
         TextCustom("$p_current€ out of $p_goal€", Gray35, 12.sp, FontWeight.Normal, modifier = Modifier)
         LinearProgressIndicator(
             color = Primary25,
-            progress = ((p_goal.toFloat()/p_current.toFloat()) * 100),
+            backgroundColor = Gray80,
+            progress = p_current.toFloat()/p_goal.toFloat(),
             modifier = Modifier
                 .clip(RoundedCornerShape(17.dp))
                 .height(10.dp)
