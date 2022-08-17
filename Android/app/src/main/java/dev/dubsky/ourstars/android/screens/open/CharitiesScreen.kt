@@ -43,7 +43,8 @@ fun CharitiesScreen(
         Column (
             Modifier
                 .fillMaxWidth(0.9f)
-                .fillMaxHeight()
+                .fillMaxHeight(),
+            verticalArrangement = Arrangement.spacedBy(20.dp)
                 ) {
             AvatarTextRow("Jane Doe", Icons.Filled.Person)
             SearchBar(searchState, Icons.Filled.Search)
@@ -58,9 +59,7 @@ fun CharitiesScreen(
                 // TextCustom("Family Support", Primary15, 12.sp, FontWeight.Bold, modifier = Modifier)
             }
             Column(
-                verticalArrangement = Arrangement.spacedBy(20.dp),
-                modifier = Modifier
-                    .padding(0.dp, 8.dp)
+                verticalArrangement = Arrangement.spacedBy(20.dp)
             ) {
                 CharityCard(
                     "Child Protection",
