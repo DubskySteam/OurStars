@@ -34,7 +34,9 @@ fun CharitiesScreen(
                 ) {
             AvatarTextRow("Jane Doe", Icons.Filled.Person)
             Column(
-                verticalArrangement = Arrangement.spacedBy(20.dp)
+                verticalArrangement = Arrangement.spacedBy(20.dp),
+                modifier = Modifier
+                    .padding(0.dp, 8.dp)
             ) {
                 CharityCard(
                     "Child Protection",

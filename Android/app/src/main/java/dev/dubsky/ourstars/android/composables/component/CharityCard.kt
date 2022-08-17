@@ -1,15 +1,21 @@
 package dev.dubsky.ourstars.android.composables.component
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.Icon
 import androidx.compose.material.LinearProgressIndicator
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -45,7 +51,7 @@ fun CharityCard(
                 contentDescription = null,
                 Modifier
                     .clip(RoundedCornerShape(17.dp))
-                    .size(150.dp)
+                    .size(160.dp)
             )
             Column (
                 Modifier
@@ -55,11 +61,16 @@ fun CharityCard(
                 TextCustom(text, Gray35, 12.sp, FontWeight.Normal, modifier = Modifier)
                 TextCustom(title, Primary15, 16.sp, FontWeight.Bold, modifier = Modifier)
                 CharityProgress(1133, 2300)
-            }
-            Row(
-                horizontalArrangement = Arrangement.End
-            ) {
-                TextCustom("Details", Primary25, 14.sp, FontWeight.Bold, modifier = Modifier.clickable {  })
+                Row(
+                    horizontalArrangement = Arrangement.End,
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(0.dp, 5.dp)
+                ) {
+                    TextCustom("Details", Primary25, 14.sp, FontWeight.Bold, modifier = Modifier.clickable {  })
+                    Icon(Icons.Filled.PlayArrow, null, tint = Primary25)
+                }
             }
         }
     }
