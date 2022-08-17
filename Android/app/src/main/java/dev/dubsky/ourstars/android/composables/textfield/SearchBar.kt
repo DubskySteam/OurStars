@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import dev.dubsky.ourstars.android.R
 import dev.dubsky.ourstars.android.composables.frames.IconFrame
 import dev.dubsky.ourstars.android.ui.theme.Gray80
 import dev.dubsky.ourstars.android.ui.theme.Primary25
@@ -52,7 +53,7 @@ fun SearchBar(state: MutableState<TextFieldValue>, trail: ImageVector) {
                 .border(border = BorderStroke(0.5.dp, Gray80), shape = RoundedCornerShape(17.dp))
                 .height(47.dp)
         )
-        IconFrame(50)
+        IconFrame(50, R.drawable.settings)
     }
 }
 

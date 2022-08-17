@@ -1,5 +1,6 @@
 package dev.dubsky.ourstars.android.composables.frames
 
+import android.graphics.drawable.Drawable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -24,6 +25,7 @@ import dev.dubsky.ourstars.android.ui.theme.Primary25
 @Composable
 fun IconFrame(
     size: Int,
+    img: Int
 ) {
     Box(
         contentAlignment = Alignment.Center,
@@ -32,12 +34,12 @@ fun IconFrame(
             .background(Primary25,RoundedCornerShape(17.dp))
             .clip(RoundedCornerShape(17.dp))
     ) {
-        Image(painterResource(R.drawable.settings), null)
+        Image(painterResource(img), null)
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun IconFramePreview() {
-    IconFrame(48)
+    IconFrame(48, R.drawable.settings)
 }
